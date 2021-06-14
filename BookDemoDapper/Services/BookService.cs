@@ -14,11 +14,15 @@ namespace BookDemoDapper.Services
     public class BookService : IBookService
     {
         private IDbConnection db;
+
+        //Veritabanı bağlantısı gerçekleştirlmiştir
         public BookService(IConfiguration configuration)
         {
             this.db = new SqlConnection(configuration.GetConnectionString("DefaultConnection"));
         }
 
+        
+        //Dapper Micro ORM ile CRUD işlemleri gerçekleştirilmiştir.
         public Book Add(Book book)
         {
             var sql = "INSERT INTO Books (Name,PublishedDate,Description) VALUES(@Name, @PublishedDate, @Description);" + "SELECT CAST(SCOPE_IDENTITY() as int);";
