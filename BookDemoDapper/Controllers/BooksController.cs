@@ -46,7 +46,7 @@ namespace BookDemoDapper.Controllers
         public IActionResult CreateBook(Book book)
         {
             var newBook = service.Add(book);
-            return Ok(newBook);
+            return Ok("Ürün Eklendi");
         }
 
         //UPDATE
