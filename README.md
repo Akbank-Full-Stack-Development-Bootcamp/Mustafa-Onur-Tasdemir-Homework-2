@@ -1,3 +1,3 @@
 # Mustafa-Onur-Tasdemir-Homework-2
 
-Bu projede Dapper ORM ve Database Design bulunmaktadır.
+Bu projede Dapper ORM, Database Design ve Middleware örnekleri bulunmaktadır.
